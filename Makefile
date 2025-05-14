@@ -1,6 +1,6 @@
 .PHONY: all build-tests build-release test clean run
 
-all: build-release
+all: run
 
 build-release:
 	cmake --preset release
@@ -13,7 +13,7 @@ build-tests:
 run: build-release
 	./build/release/my_app
 
-test: build-tests
+tests: build-tests
 	./build/tests/tests/my_tests
 
 clean:
